@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background: #0c102b;
+  }
+  h1 {
+    text-align: center;
+    margin: 2rem;
+    font-size: 50px;
+    background: linear-gradient(#e96443, #904e95, #4158d0);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .search-form {
+    text-align: center;
+    padding: 1rem;
+    width: 600px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  #search-box {
+    flex: 1;
+    height: 100%;
+    border: 1px solid silver;
+    padding: 1rem;
+    background: #fff;
+    outline: none;
+    font-size: 18px;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    position: relative;
+  }
+  .delete {
+    background: #fff;
+    position: absolute;
+    left: 58%;
+    font-size: 20px;
+    color: #545353;
+    opacity: 0;
+  }
+  .delete.removeBtn {
+    opacity: 1;
+  }
+  button {
+    font-size: 18px;
+    padding: 1rem;
+    height: 100%;
+    width: 120px;
+    background: #e65c19;
+    color: white;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background: white;
+    border: 1px solid #e65c19;
+    color: #e65c19;
+  }
+  
+  #show-more {
+    font-size: 18px;
+    padding: 1rem;
+    height: 100%;
+    width: 150px;
+    background: #e65c19;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: auto;
+    display: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  #show-more.show {
+    display: block;
+  }
+  
+  #search-result {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+  }
+  
+  #search-result img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  #show-more:hover {
+    background: white;
+    border: 1px solid #e65c19;
+    color: #e65c19;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #search-result {
+      width: 80%;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    #search-result {
+      width: 80%;
+      grid-template-columns: 1fr;
+    }
+    .search-form {
+      width: 200px;
+      justify-content: center;
+    }
+  }
